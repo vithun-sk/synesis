@@ -69,9 +69,9 @@ export default function Header({ onToggleSidebar }) {
           <div>
             <h1 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
               {currentMeta.title}
-              <span className="hidden sm:inline-block text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200">
+              {/* <span className="hidden sm:inline-block text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200">
                 Live Prototype
-              </span>
+              </span> */}
             </h1>
             <p className="text-xs text-slate-500 hidden md:block">
               {currentMeta.subtitle}
@@ -129,13 +129,13 @@ export default function Header({ onToggleSidebar }) {
           </button>
 
           {/* Run Simulation Button */}
-          <button
+          {/* <button
             onClick={() => setSimulationModalOpen(true)}
             className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white rounded-lg text-xs font-semibold shadow-sm transition-all"
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>Run Simulation</span>
-          </button>
+          </button> */}
         </div>
       </div>
     </header>

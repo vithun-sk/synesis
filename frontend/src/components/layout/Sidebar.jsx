@@ -28,7 +28,7 @@ export default function Sidebar({ isOpen, onClose }) {
       badgeColor: 'bg-red-500 text-white',
     },
     { id: 'analytics', label: 'Energy Analytics', icon: BarChart3 },
-    { id: 'status', label: 'About / System Status', icon: Activity },
+   
   ];
 
   return (
@@ -76,14 +76,14 @@ export default function Sidebar({ isOpen, onClose }) {
                 {isConnected ? 'Backend Online' : 'Backend Offline'}
               </span>
             </div>
-            <span className="text-[10px] text-slate-500 font-mono">PORT 5000</span>
+            <span className="text-[10px] text-slate-500 font-mono"></span>
           </div>
         </div>
 
         {/* Main Navigation */}
         <nav className="flex-1 p-4 space-y-1.5 overflow-y-auto">
           <div className="px-3 pb-2 text-[11px] font-semibold tracking-wider uppercase text-slate-500">
-            Intelligence Console
+            Sidebar
           </div>
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -123,7 +123,7 @@ export default function Sidebar({ isOpen, onClose }) {
         </nav>
 
         {/* Quick Simulation Trigger */}
-        <div className="p-4 border-t border-slate-900 bg-slate-950/80">
+        {/* <div className="p-4 border-t border-slate-900 bg-slate-950/80">
           <button
             onClick={() => setSimulationModalOpen(true)}
             className="w-full flex items-center justify-center gap-2 px-3.5 py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-medium text-xs rounded-xl shadow-md shadow-emerald-950 transition-all active:scale-[0.98]"
@@ -142,7 +142,7 @@ export default function Sidebar({ isOpen, onClose }) {
               YOLOv8 Edge
             </span>
           </div>
-        </div>
+        </div> */}
       </aside>
     </>
   );

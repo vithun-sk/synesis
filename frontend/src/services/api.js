@@ -118,7 +118,46 @@ class ApiClient {
     return await this.request('/api/analytics/rooms');
   }
 
-  // 6. Simulation
+  // 6. Vision & Camera AI Telemetry
+  async getVisionHealth() {
+    return await this.request('/api/vision/health');
+  }
+
+  async detectVisionFrame({ image, room_id, room_code, confidence_threshold }) {
+    return await this.request('/api/vision/detect', {
+      method: 'POST',
+      body: JSON.stringify({
+        image,
+        room_id,
+        room_code,
+        confidence_threshold,
+      }),
+    });
+  }
+
+  async recordVisionReading({ room_id, estimated_occupancy, confidence, power_watts, ac_on, lights_on, projector_on }) {
+    return await this.request('/api/vision/reading', {
+      method: 'POST',
+      body: JSON.stringify({
+        room_id,
+        estimated_occupancy,
+        confidence,
+        power_watts,
+        ac_on,
+        lights_on,
+        projector_on,
+      }),
+    });
+  }
+
+  async closeVisionSession(room_id) {
+    return await this.request('/api/vision/session/close', {
+      method: 'POST',
+      body: JSON.stringify({ room_id }),
+    });
+  }
+
+  // 7. Simulation (preserved backend endpoint)
   async runSimulation(scenario = 'telemetry_tick') {
     return await this.request('/api/simulate', {
       method: 'POST',
@@ -126,7 +165,7 @@ class ApiClient {
     });
   }
 
-  // 7. Reset data
+  // 8. Reset data
   async resetDemoData() {
     return await this.request('/api/reset', {
       method: 'POST',

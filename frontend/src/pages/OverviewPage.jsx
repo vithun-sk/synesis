@@ -31,7 +31,7 @@ export default function OverviewPage() {
   return (
     <div className="space-y-6">
       {/* Hackathon Prototype Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-950 rounded-2xl p-4 sm:p-5 text-white border border-slate-800 shadow-md flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      {/* <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-950 rounded-2xl p-4 sm:p-5 text-white border border-slate-800 shadow-md flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="flex items-start gap-3.5">
           <div className="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 shrink-0">
             <Cpu className="w-5 h-5" />
@@ -54,7 +54,7 @@ export default function OverviewPage() {
             <span>Simulate Waste Events</span>
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* KPI Cards */}
       <OverviewKPIs />
