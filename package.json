@@ -1,0 +1,22 @@
+{
+  "name": "phantom-classrooms",
+  "version": "1.0.0",
+  "description": "Campus energy-management backend that detects potential electricity waste in classrooms",
+  "private": true,
+  "scripts": {
+    "start": "npm start --prefix backend",
+    "dev": "npm run dev --prefix backend",
+    "test": "npm test --prefix backend",
+    "test:watch": "npm run test:watch --prefix backend",
+    "test:coverage": "npm run test:coverage --prefix backend"
+  },
+  "keywords": [
+    "energy-efficiency",
+    "campus-management",
+    "phantom-load",
+    "supabase",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC"
+}
